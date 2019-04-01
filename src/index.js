@@ -1,27 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Welcome(props) {
-  return (
+function Tick() {
+  const element = (
     <div>
-      <h1>Welcome {props.name}</h1>
+      <p1> Hello My World!</p1> <br></br>
+      <p1> It is {new Date().toLocaleTimeString()}.</p1>
     </div>
   );
+  ReactDOM.render(element, document.getElementById("root"));
 }
 
-function App() {
-  return (
-    <div>
-      <Welcome name="Nakka" />
-      <Welcome name="Leela" />
-      <Welcome name="prasanth" />
-      <Welcome name="It does Work" />
-      <img
-        src="./images/image-4f5952b3351e98e47db3ac011017000a.png"
-        alt="something"
-      />
-    </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+setInterval(Tick,1000)
